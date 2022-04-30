@@ -2,3 +2,5 @@ data/*.csv
 data/*.names
 
 test.ipynb
+
+**/__pycache__
