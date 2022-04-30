@@ -1,5 +1,5 @@
 import pickle
-from tensorflow.keras.models import load_model
+import tensorflow as tf
 
 min_max = pickle.load(open('serialization/utilities/min_and_max.pickle', 'rb')) # NOTE: you can debug the min_max using st.json(min_max)
 regression_metrics = pickle.load(open('serialization/dataframes/regression_metrics.pickle', 'rb'))
@@ -14,6 +14,6 @@ scaler_wind = pickle.load(open('serialization/utilities/scaler_wind.pickle', 'rb
 scaler_rain = pickle.load(open('serialization/utilities/scaler_rain.pickle', 'rb'))
 scaler_area = pickle.load(open('serialization/utilities/scaler_area.pickle', 'rb'))
 
-adam_model = load_model('serialization/models/regression_models/adam_model.h5')
-adagrad_model = load_model('serialization/models/regression_models/adagrad_model.h5')
-adadelta_model = load_model('serialization/models/regression_models/adadelta_model.h5')
+adam_model = tf.keras.models.load_model('serialization/models/regression_models/adam_model.h5')
+adagrad_model = tf.keras.models.load_model('serialization/models/regression_models/adagrad_model.h5')
+adadelta_model = tf.keras.models.load_model('serialization/models/regression_models/adadelta_model.h5')
