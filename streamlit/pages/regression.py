@@ -1,7 +1,7 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-from utilities.helper import min_max, regression_metrics
+from utilities.helper import min_max
 from utilities.helper import scaler_DC, scaler_FFMC, scaler_rain, scaler_ISI, scaler_DMC, scaler_RH, scaler_temp, scaler_wind, scaler_area
 from utilities.helper import adam_model, adagrad_model, adadelta_model
 
@@ -98,8 +98,8 @@ def regression_page():
             if area != None:
                 st.metric('Area', round(area), delta=None, delta_color="normal")
 
-    st.write("""__________""")
+    # st.write("""__________""")
 
-    with st.container():
-        st.header('Model Evaluation')
-        st.dataframe(regression_metrics)
+    # with st.container():
+    #     st.header('Model Evaluation')
+    #     st.dataframe(regression_metrics)

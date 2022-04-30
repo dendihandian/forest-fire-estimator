@@ -2,7 +2,9 @@ import pickle
 import tensorflow as tf
 
 min_max = pickle.load(open('serialization/utilities/min_and_max.pickle', 'rb')) # NOTE: you can debug the min_max using st.json(min_max)
-regression_metrics = pickle.load(open('serialization/dataframes/regression_metrics.pickle', 'rb'))
+
+# NOTE: due to different pandas version defined in poetry and conda env, this line is disabled.
+# regression_metrics = pickle.load(open('serialization/dataframes/regression_metrics.pickle', 'rb'))
 
 scaler_DC = pickle.load(open('serialization/utilities/scaler_DC.pickle', 'rb'))
 scaler_DMC = pickle.load(open('serialization/utilities/scaler_DMC.pickle', 'rb'))
