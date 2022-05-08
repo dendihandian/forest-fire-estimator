@@ -36,8 +36,18 @@ Export the updated environment:
 conda env export > environment.yml --no-builds
 ```
 
-create `requirements.txt`:
+create `requirements.txt` if required:
 
 ```
 pip list --format=freeze > requirements.txt
+```
+
+## Note
+
+At the current streamlit deployment, these packages need to be removed to succeed the build:
+
+```
+- vc=14.2
+- vs2015_runtime=14.27.29016
+- wincertstore=0.2
 ```
