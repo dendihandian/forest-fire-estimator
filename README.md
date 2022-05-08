@@ -33,11 +33,11 @@ streamlit run streamlit/app.py
 Export the updated environment:
 
 ```
-conda env export > environment.yml
+conda env export > environment.yml --no-builds
 ```
 
 create `requirements.txt`:
 
 ```
-conda list -e > requirements.txt
+pip list --format=freeze > requirements.txt
 ```
