@@ -2,51 +2,42 @@
 
 ## Requirement
 
-Development:
-- Anaconda
-- Streamlit Package (Install via Anaconda)
-
-Production (Streamlit):
-- Python 3.9 or newer
-- Poetry Dependency Manager
+- Anaconda (not a 🐍)
 
 ## Development
 
-It's better to create a new Anaconda Environment named `streamlit_related` or `streamlit_projects` or anything. You can use conda command to create it:
+### Setup
+
+Import and create a new conda environment from `environment.yml`:
 
 ```
-conda create -n streamlit_related python=3.8
+conda env create -f environment.yml
 ```
 
-use the new created env:
+activate the new created environment:
 
 ```
-conda activate streamlit_related
+conda activate forest-fire-estimator
 ```
 
-install streamlit package:
-```
-pip install streamlit
-```
-```
-pip install sklearn
-```
+### Running Streamlit Server
 
-run the streamlit development server:
+In the conda terminal, go to the project directory and execute the command:
+
 ```
 streamlit run streamlit/app.py
 ```
 
-## Deployment (Streamlit)
+## Deployment
 
-> `streamlit` package already added in the streamlit runtime. no need to install.
+Export the updated environment:
 
-install production dependencies:
 ```
-poetry install
+conda env export > environment.yml
 ```
 
-export production dependencies:
+create `requirements.txt`:
+
 ```
-poetry export -f requirements.txt --without-hashes > requirements.txt
+conda list -e > requirements.txt
 ```
