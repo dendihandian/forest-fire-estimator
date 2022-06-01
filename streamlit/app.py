@@ -1,6 +1,7 @@
 import streamlit as st
 from pages.classification import classfication_page
 from pages.regression import regression_page
+from pages.info import info_page
 
 st.title('Forest Fire Estimator', anchor=None)
 st.write("""
@@ -14,10 +15,12 @@ with st.sidebar:
 
     page = st.selectbox(
         "Select page",
-        ("Regression", "Classification")
+        ("Regression", "Classification", "Info")
     )
 
 if page == 'Regression':
     regression_page()
-else:
+if page == 'Classification':
     classfication_page()
+else:
+    info_page()
