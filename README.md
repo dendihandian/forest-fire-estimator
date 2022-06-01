@@ -2,7 +2,8 @@
 
 ## Requirement
 
-- Anaconda (not a 🐍)
+- Anaconda (for model training & development)
+- Python 3.9 (for venv and production)
 
 ## Development
 

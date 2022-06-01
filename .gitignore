@@ -4,3 +4,6 @@ data/*.names
 test.ipynb
 
 **/__pycache__
+.ipynb_checkpoints
+
+ffe_venv
